@@ -25,9 +25,7 @@
         flake-parts.follows = "flake-parts";
 
         # optionals
-        flake-utils.follows = "";
         systems.follows = "";
-        nil.follows = "";
       };
     };
   };
