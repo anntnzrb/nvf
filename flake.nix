@@ -14,19 +14,9 @@
     };
 
   inputs = {
-    nixpkgs.url = "https://channels.nixos.org/nixpkgs-unstable/nixexprs.tar.xz";
-    flake-parts.url = "github:hercules-ci/flake-parts/main";
-    flake-parts.inputs.nixpkgs-lib.follows = "nixpkgs";
+    nixpkgs.follows = "nvf/nixpkgs";
+    flake-parts.follows = "nvf/flake-parts";
 
-    nvf = {
-      url = "github:notashelf/nvf/main";
-      inputs = {
-        nixpkgs.follows = "nixpkgs";
-        flake-parts.follows = "flake-parts";
-
-        # optionals
-        systems.follows = "";
-      };
-    };
+    nvf.url = "github:notashelf/nvf/main";
   };
 }
