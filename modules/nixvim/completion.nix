@@ -1,6 +1,8 @@
 {
-  config.vim.autocomplete.nvim-cmp = {
+  config.vim.autocomplete.blink-cmp = {
     enable = true;
+    friendly-snippets.enable = true;
+
     mappings = {
       previous = "<C-p>";
       next = "<C-n>";
