@@ -42,14 +42,63 @@
         };
     };
 
-    telescope.mappings = {
-      lspDocumentSymbols = "<leader>csb";
-      lspWorkspaceSymbols = "<leader>csw";
-      lspReferences = "<leader>cR";
-      lspImplementations = "<leader>ci";
-      lspDefinitions = "<leader>cd";
-      lspTypeDefinitions = "<leader>ct";
-      diagnostics = "<leader>cd";
-    };
+    keymaps = [
+      {
+        key = "<leader>csb";
+        mode = "n";
+        action = "require('fzf-lua').lsp_document_symbols";
+        lua = true;
+        silent = true;
+        desc = "LSP: Document symbols";
+      }
+      {
+        key = "<leader>csw";
+        mode = "n";
+        action = "require('fzf-lua').lsp_workspace_symbols";
+        lua = true;
+        silent = true;
+        desc = "LSP: Workspace symbols";
+      }
+      {
+        key = "<leader>cR";
+        mode = "n";
+        action = "require('fzf-lua').lsp_references";
+        lua = true;
+        silent = true;
+        desc = "LSP: References";
+      }
+      {
+        key = "<leader>ci";
+        mode = "n";
+        action = "require('fzf-lua').lsp_implementations";
+        lua = true;
+        silent = true;
+        desc = "LSP: Implementations";
+      }
+      {
+        key = "<leader>cd";
+        mode = "n";
+        action = "require('fzf-lua').lsp_definitions";
+        lua = true;
+        silent = true;
+        desc = "LSP: Definitions";
+      }
+      {
+        key = "<leader>ct";
+        mode = "n";
+        action = "require('fzf-lua').lsp_typedefs";
+        lua = true;
+        silent = true;
+        desc = "LSP: Type definitions";
+      }
+      {
+        key = "<leader>cD";
+        mode = "n";
+        action = "require('fzf-lua').diagnostics_document";
+        lua = true;
+        silent = true;
+        desc = "LSP: Document diagnostics";
+      }
+    ];
   };
 }

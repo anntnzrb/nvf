@@ -22,6 +22,15 @@ in
       };
     };
 
-    telescope.mappings.buffers = "<leader>bb";
+    keymaps = [
+      {
+        key = "<leader>bb";
+        mode = "n";
+        action = "require('fzf-lua').buffers";
+        lua = true;
+        silent = true;
+        desc = "Buffer picker";
+      }
+    ];
   };
 }

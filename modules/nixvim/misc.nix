@@ -12,8 +12,19 @@
 
     notes.todo-comments = {
       enable = true;
-      mappings.telescope = "<leader>st";
+      mappings.telescope = null;
     };
+
+    keymaps = [
+      {
+        key = "<leader>st";
+        mode = "n";
+        action = "require('todo-comments.fzf').todo";
+        lua = true;
+        silent = true;
+        desc = "Search TODO comments";
+      }
+    ];
 
     comments.comment-nvim = {
       enable = true;

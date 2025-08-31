@@ -1,22 +1,35 @@
 _: {
-  config.vim.telescope = {
+  config.vim.fzf-lua = {
     enable = true;
-    mappings = {
-      findFiles = "<leader> ";
-      liveGrep = "<leader>sg";
-      open = "<leader>s\/";
-
-      # replaced by lazygit
-      gitCommits = null;
-      gitBufferCommits = null;
-      gitBranches = null;
-      gitStatus = null;
-      gitStash = null;
-
-      findProjects = null;
-      helpTags = null;
-      resume = null;
-      treesitter = null;
+    setupOpts = {
+      profile = "fzf-native"; # Maximum performance with native fzf
     };
   };
+
+  config.vim.keymaps = [
+    {
+      key = "<leader> ";
+      mode = "n";
+      action = "require('fzf-lua').files";
+      lua = true;
+      silent = true;
+      desc = "Find files (fzf-lua)";
+    }
+    {
+      key = "<leader>sg";
+      mode = "n";
+      action = "require('fzf-lua').live_grep";
+      lua = true;
+      silent = true;
+      desc = "Live grep (fzf-lua)";
+    }
+    {
+      key = "<leader>s/";
+      mode = "n";
+      action = "require('fzf-lua').builtin";
+      lua = true;
+      silent = true;
+      desc = "FzfLua builtin pickers";
+    }
+  ];
 }
