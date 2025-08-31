@@ -26,9 +26,7 @@ in
       {
         key = "<leader>bb";
         mode = "n";
-        action = "require('fzf-lua').buffers";
-        lua = true;
-        silent = true;
+        action = ":FzfLua buffers<CR>";
         desc = "Buffer picker";
       }
     ];

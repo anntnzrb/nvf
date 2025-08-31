@@ -19,9 +19,7 @@
       {
         key = "<leader>st";
         mode = "n";
-        action = "require('todo-comments.fzf').todo";
-        lua = true;
-        silent = true;
+        action = ":TodoFzfLua<CR>";
         desc = "Search TODO comments";
       }
     ];

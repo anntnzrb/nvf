@@ -46,57 +46,43 @@
       {
         key = "<leader>csb";
         mode = "n";
-        action = "require('fzf-lua').lsp_document_symbols";
-        lua = true;
-        silent = true;
+        action = ":FzfLua lsp_document_symbols<CR>";
         desc = "LSP: Document symbols";
       }
       {
         key = "<leader>csw";
         mode = "n";
-        action = "require('fzf-lua').lsp_workspace_symbols";
-        lua = true;
-        silent = true;
+        action = ":FzfLua lsp_workspace_symbols<CR>";
         desc = "LSP: Workspace symbols";
       }
       {
         key = "<leader>cR";
         mode = "n";
-        action = "require('fzf-lua').lsp_references";
-        lua = true;
-        silent = true;
+        action = ":FzfLua lsp_references<CR>";
         desc = "LSP: References";
       }
       {
         key = "<leader>ci";
         mode = "n";
-        action = "require('fzf-lua').lsp_implementations";
-        lua = true;
-        silent = true;
+        action = ":FzfLua lsp_implementations<CR>";
         desc = "LSP: Implementations";
       }
       {
         key = "<leader>cd";
         mode = "n";
-        action = "require('fzf-lua').lsp_definitions";
-        lua = true;
-        silent = true;
+        action = ":FzfLua lsp_definitions<CR>";
         desc = "LSP: Definitions";
       }
       {
         key = "<leader>ct";
         mode = "n";
-        action = "require('fzf-lua').lsp_typedefs";
-        lua = true;
-        silent = true;
+        action = ":FzfLua lsp_typedefs<CR>";
         desc = "LSP: Type definitions";
       }
       {
         key = "<leader>cD";
         mode = "n";
-        action = "require('fzf-lua').diagnostics_document";
-        lua = true;
-        silent = true;
+        action = ":FzfLua diagnostics_document<CR>";
         desc = "LSP: Document diagnostics";
       }
     ];
