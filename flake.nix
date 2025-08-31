@@ -5,12 +5,7 @@
     inputs:
     inputs.flake-parts.lib.mkFlake { inherit inputs; } {
       systems = inputs.nixpkgs.lib.systems.flakeExposed;
-      imports =
-        let
-          modulesDir = ./modules/flake;
-        in
-        with builtins;
-        map (mod: "${modulesDir}/${mod}") (attrNames (readDir modulesDir));
+      imports = [ ./modules/flake ];
     };
 
   inputs = {
