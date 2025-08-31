@@ -62,7 +62,7 @@ in
   perSystem =
     { self', pkgs, ... }:
     {
-      formatter = pkgs.nixfmt-rfc-style;
+      formatter = pkgs.nixfmt-tree;
       packages = {
         nvf = mkNvimConf pkgs [ nixvimModules ];
         default = self'.packages.nvf;
