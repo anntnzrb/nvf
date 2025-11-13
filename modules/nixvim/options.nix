@@ -17,6 +17,9 @@
         # mouse
         mouse = "nv";
         mousemodel = "extend";
+
+        # search
+        searchCase = "smart";
       };
 
     clipboard = {
