@@ -1,3 +1,4 @@
+{ lib, ... }:
 {
   config.vim = {
     languages = {
@@ -8,7 +9,7 @@
     lsp = {
       enable = true;
       formatOnSave = false;
-      lspconfig.enable = true;
+      lspconfig.enable = lib.mkForce false;
       null-ls.enable = true;
       nvim-docs-view.enable = false; # this is broken
 
