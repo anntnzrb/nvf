@@ -19,7 +19,8 @@
         mousemodel = "extend";
 
         # search
-        searchCase = "smart";
+        ignorecase = true;
+        smartcase = true;
       };
 
     clipboard = {
