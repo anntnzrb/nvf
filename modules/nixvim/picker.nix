@@ -4,6 +4,9 @@ _: {
     setupOpts.profile = "fzf-native";
   };
 
+  # yaml treesitter needed for fzf-lua previews
+  config.vim.languages.yaml.enable = true;
+
   config.vim.keymaps = [
     {
       key = "<leader> ";
