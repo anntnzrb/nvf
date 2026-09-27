@@ -16,7 +16,9 @@ jobs:
     steps:
       - uses: actions/checkout@v6
 
-      - uses: DeterminateSystems/nix-installer-action@v20
+      - uses: DeterminateSystems/nix-installer-action@v23
+        with:
+          determinate: false
 
       - name: Install omnix
         run: nix --accept-flake-config profile install "github:juspay/omnix"
